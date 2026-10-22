@@ -1,0 +1,1573 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b3b">
+  <meta name="description" content="CoolCare AC Services provides AC repair, installation, gas refilling, cleaning and maintenance in Lahore, Pakistan.">
+  <title>CoolCare AC Services | Lahore, Pakistan</title>
+
+  <style>
+    :root {
+      --navy: #071b3b;
+      --blue: #123d76;
+      --primary: #1769d2;
+      --light-blue: #eaf3ff;
+      --white: #ffffff;
+      --text: #25344b;
+      --muted: #66758a;
+      --border: #dce5f0;
+      --shadow: 0 12px 35px rgba(7, 27, 59, .09);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: #e7efff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--navy);
+      color: white;
+      font-size: 25px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 19px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+      box-shadow: 0 5px 15px rgba(23,105,210,.2);
+    }
+
+    .btn-primary:hover {
+      background: #0e56b1;
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 23px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(72,149,255,.2), transparent 27%),
+        linear-gradient(125deg, #071b3b, #103a70);
+      color: white;
+    }
+
+    .hero-grid {
+      min-height: 555px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 45px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.12);
+      color: #d5e8ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 23px 0 18px;
+      font-size: clamp(38px, 5vw, 61px);
+      line-height: 1.09;
+      letter-spacing: -1.8px;
+    }
+
+    .hero h1 span {
+      color: #74b6ff;
+    }
+
+    .hero p {
+      max-width: 550px;
+      color: #d5e3f8;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero .btn-outline {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,.45);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 28px;
+      color: #e2edff;
+      font-size: 13px;
+    }
+
+    .hero-visual {
+      min-height: 350px;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      border-radius: 26px;
+      border: 5px solid rgba(255,255,255,.12);
+      box-shadow: 0 25px 65px rgba(0,0,0,.25);
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: 18px;
+      left: -20px;
+      background: white;
+      color: var(--navy);
+      border-radius: 14px;
+      padding: 15px 18px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    .trust-strip {
+      border-bottom: 1px solid var(--border);
+      background: white;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .trust-item span {
+      font-size: 25px;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .section-heading .eyebrow {
+      background: var(--light-blue);
+      color: var(--primary);
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.2;
+      margin: 14px 0;
+      letter-spacing: -.7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 27px;
+      background: white;
+      box-shadow: 0 4px 18px rgba(7,27,59,.025);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 59px;
+      height: 59px;
+      border-radius: 15px;
+      background: var(--light-blue);
+      font-size: 29px;
+      margin-bottom: 19px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      min-height: 48px;
+    }
+
+    .service-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 22px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+    }
+
+    .price {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 19px;
+    }
+
+    .price small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .small-link {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .about {
+      background: #f5f8fc;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 410px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-content h2 {
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin: 16px 0;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 23px 0 28px;
+    }
+
+    .check-list li {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: #dff7e9;
+      color: #137443;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 28px 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .step-number {
+      margin: 0 auto 17px;
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--primary);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .step-card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reviews {
+      background: #f5f8fc;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review-card {
+      background: white;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .stars {
+      color: #f2a900;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .avatar {
+      width: 41px;
+      height: 41px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--light-blue);
+      color: var(--primary);
+    }
+
+    .reviewer small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .booking-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: start;
+      gap: 50px;
+    }
+
+    .booking-info .eyebrow {
+      background: rgba(255,255,255,.12);
+    }
+
+    .booking-info h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    .booking-info > p {
+      color: #c8d8ef;
+      margin-bottom: 27px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-top: 20px;
+    }
+
+    .contact-detail .detail-icon {
+      font-size: 23px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-detail p, .contact-detail a {
+      color: #c8d8ef;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .booking-form {
+      background: white;
+      color: var(--text);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.15);
+    }
+
+    .booking-form h3 {
+      color: var(--navy);
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #d9e1ec;
+      border-radius: 8px;
+      padding: 12px;
+      outline: none;
+      background: #fbfcfe;
+      color: var(--text);
+      min-width: 0;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(23,105,210,.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 95px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 20px;
+      border: 0;
+      font-size: 15px;
+    }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      gap: 13px;
+    }
+
+    .faq-list details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .faq-list summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .faq-list details p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      background: #041329;
+      color: white;
+      padding: 45px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 32px;
+    }
+
+    footer .brand {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    footer .brand small {
+      color: #b5c4db;
+    }
+
+    footer p {
+      color: #b5c4db;
+      font-size: 13px;
+      max-width: 340px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      color: #b5c4db;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #a8b9d2;
+    }
+
+    .floating-actions {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      display: grid;
+      gap: 10px;
+    }
+
+    .float-btn {
+      width: 51px;
+      height: 51px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      box-shadow: 0 5px 18px rgba(0,0,0,.2);
+      color: white;
+      font-size: 23px;
+      transition: transform .2s;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.08);
+    }
+
+    .float-call {
+      background: var(--primary);
+    }
+
+    .float-whatsapp {
+      background: #20bd5a;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .navbar > .btn {
+        display: none;
+      }
+
+      .hero-grid {
+        gap: 25px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid, .booking-grid {
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .navbar {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .brand-icon {
+        width: 39px;
+        height: 39px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 17px 4% 23px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 5px;
+        font-size: 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: 54px;
+        padding-bottom: 45px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero-visual {
+        min-height: 260px;
+        margin: 10px 0 15px;
+      }
+
+      .hero-image {
+        height: 280px;
+      }
+
+      .floating-card {
+        left: 8px;
+        bottom: 4px;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 8px;
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .services-grid,
+      .about-grid,
+      .steps-grid,
+      .reviews-grid,
+      .booking-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 300px;
+      }
+
+      .service-card p {
+        min-height: auto;
+      }
+
+      .booking-grid {
+        gap: 32px;
+      }
+
+      .booking-form {
+        padding: 22px 17px;
+      }
+
+      .footer-grid {
+        gap: 28px;
+      }
+
+      .floating-actions {
+        right: 12px;
+        bottom: 14px;
+      }
+
+      .float-btn {
+        width: 47px;
+        height: 47px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span>📍 AC Services in Lahore, Pakistan</span>
+      <span>❄️ Your Comfort, Our Priority</span>
+    </div>
+  </div>
+
+  <header>
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="CoolCare home">
+        <span class="brand-icon">❄</span>
+        <span>CoolCare<small>AC SERVICES</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="navLinks">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-primary" href="#booking">Book a Service ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">❄ Professional AC Solutions</span>
+          <h1>Stay Cool.<br>Stay Comfortable.<br><span>Stay Carefree.</span></h1>
+          <p>
+            Reliable air conditioning repair, installation and maintenance
+            services for homes and businesses across Lahore.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary">Book AC Service →</a>
+            <a href="tel:+923000000000" class="btn btn-outline">☎ Call Us Now</a>
+          </div>
+
+          <div class="hero-points">
+            <span>✓ Skilled Technicians</span>
+            <span>✓ Upfront Estimates</span>
+            <span>✓ Home & Office</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img class="hero-image"
+            src="https://images.unsplash.com/photo-1631545806609-8b8f0b4d8c85?auto=format&fit=crop&w=1000&q=85"
+            alt="Air conditioning equipment in a modern interior"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1631545806609-8b8f0b4d8c85?auto=format&fit=crop&w=1000&q=85';">
+          <div class="floating-card">
+            ❄ Comfort starts here
+            <strong>CoolCare AC Services</strong>
+            <span>Lahore, Pakistan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><span>🛠️</span> Repair & Installation</div>
+        <div class="trust-item"><span>🏠</span> Home & Office Service</div>
+        <div class="trust-item"><span>💬</span> Easy WhatsApp Booking</div>
+        <div class="trust-item"><span>💰</span> Clear Price Estimates</div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Services</span>
+          <h2>Complete AC Care, All in One Place</h2>
+          <p>
+            From sudden breakdowns to seasonal maintenance, find the
+            right AC service for your needs.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>AC Repair</h3>
+            <p>Diagnosis and repair for cooling problems, unusual noise, leaks and common AC faults.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 1,500+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="AC Repair">Book →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">❄️</div>
+            <h3>AC Installation</h3>
+            <p>Installation of split AC units with suitable placement and setup checks.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 4,000+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="AC Installation">Book →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">💨</div>
+            <h3>Gas Refilling</h3>
+            <p>Cooling inspection, leak checks and refrigerant service where required.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 3,000+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="AC Gas Refilling">Book →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🧼</div>
+            <h3>AC Cleaning</h3>
+            <p>Cleaning of accessible filters and AC components to help maintain airflow.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 1,500+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="AC Cleaning">Book →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>AC Maintenance</h3>
+            <p>Routine inspection, basic performance checks and preventive care.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 2,000+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="AC Maintenance">Book →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Office AC Service</h3>
+            <p>AC inspection and maintenance options for offices and small businesses.</p>
+            <div class="service-bottom">
+              <div class="price">Rs. 3,000+<small>Sample starting price</small></div>
+              <a class="small-link book-service" href="#booking" data-service="Office AC Service">Book →</a>
+            </div>
+          </article>
+        </div>
+
+        <p style="text-align:center;color:#66758a;font-size:12px;margin-top:22px">
+          Demo prices only. Actual charges depend on the AC type, fault, parts and location.
+          Confirm your quote before work begins.
+        </p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div>
+          <img class="about-image"
+            src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85"
+            alt="Technician working with electrical and cooling equipment"
+            loading="lazy">
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow" style="background:#e4efff;color:#1769d2">Why CoolCare?</span>
+          <h2>Comfort You Can Count On</h2>
+          <p>
+            CoolCare AC Services is a demo business concept focused on
+            straightforward booking, clear estimates and convenient AC care
+            for customers in Lahore.
+          </p>
+          <ul class="check-list">
+            <li>Repair, cleaning and installation options</li>
+            <li>Easy booking by phone or WhatsApp</li>
+            <li>Price estimates before work begins</li>
+            <li>Service options for homes and offices</li>
+            <li>Convenient appointment requests</li>
+          </ul>
+          <a class="btn btn-primary" href="#booking">Schedule Your Service →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Simple Process</span>
+          <h2>Book Your AC Service in 3 Steps</h2>
+          <p>Send your details and discuss a suitable appointment with our team.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Choose a Service</h3>
+            <p>Select repair, installation, cleaning, gas refilling or maintenance.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Share Your Details</h3>
+            <p>Enter your name, phone number, address and preferred date.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Send on WhatsApp</h3>
+            <p>Review your message in WhatsApp and send it to request a booking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Customer Feedback</span>
+          <h2>What Our Customers Say</h2>
+          <p>Example review cards for website demonstration.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The booking process was simple and the service options were easy to understand.”</p>
+            <div class="reviewer">
+              <div class="avatar">AK</div>
+              <div>Ali Khan<small>Sample customer review</small></div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“I liked being able to send my AC problem and address directly through WhatsApp.”</p>
+            <div class="reviewer">
+              <div class="avatar">SM</div>
+              <div>Sara Malik<small>Sample customer review</small></div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The service list and estimated prices made it easy to choose what I needed.”</p>
+            <div class="reviewer">
+              <div class="avatar">UH</div>
+              <div>Usman Hassan<small>Sample customer review</small></div>
+            </div>
+          </article>
+        </div>
+
+        <p style="text-align:center;color:#66758a;font-size:12px;margin-top:20px">
+          These are fictional demo reviews, not verified customer testimonials.
+        </p>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="container booking-grid">
+        <div class="booking-info" id="contact">
+          <span class="eyebrow">Book an Appointment</span>
+          <h2>Let's Get Your AC Working Better.</h2>
+          <p>
+            Fill in the form and send your request on WhatsApp.
+            Our demo contact details are shown below.
+          </p>
+
+          <div class="contact-detail">
+            <span class="detail-icon">📞</span>
+            <div>
+              <strong>Call Us</strong>
+              <a href="tel:+923000000000">+92 300 0000000</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">💬</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer">Chat with CoolCare</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">📍</span>
+            <div>
+              <strong>Service Area</strong>
+              <p>Lahore, Punjab, Pakistan</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">🕒</span>
+            <div>
+              <strong>Working Hours</strong>
+              <p>Demo hours: Monday–Saturday, 9 AM–7 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+          <h3>Request an AC Service</h3>
+          <p class="form-intro">
+            Complete the details below. Your WhatsApp message will be prepared for you.
+          </p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="customerName">Full Name *</label>
+              <input id="customerName" name="name" type="text"
+                placeholder="Your full name" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerPhone">Phone Number *</label>
+              <input id="customerPhone" name="phone" type="tel"
+                placeholder="03XX XXXXXXX" autocomplete="tel"
+                pattern="[0-9+() -]{7,20}" required>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceType">Select Service *</label>
+              <select id="serviceType" name="service" required>
+                <option value="">Choose a service</option>
+                <option>AC Repair</option>
+                <option>AC Installation</option>
+                <option>AC Gas Refilling</option>
+                <option>AC Cleaning</option>
+                <option>AC Maintenance</option>
+                <option>Office AC Service</option>
+                <option>Other / Inspection</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="acType">AC Type</label>
+              <select id="acType" name="acType">
+                <option value="Not specified">Select AC type</option>
+                <option>Inverter Split AC</option>
+                <option>Non-Inverter Split AC</option>
+                <option>Window AC</option>
+                <option>Commercial AC</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="appointmentDate">Preferred Date *</label>
+              <input id="appointmentDate" name="date" type="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="appointmentTime">Preferred Time *</label>
+              <select id="appointmentTime" name="time" required>
+                <option value="">Choose a time</option>
+                <option>9 AM – 12 PM</option>
+                <option>12 PM – 3 PM</option>
+                <option>3 PM – 5 PM</option>
+                <option>5 PM – 7 PM</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="customerAddress">Complete Address in Lahore *</label>
+              <input id="customerAddress" name="address" type="text"
+                placeholder="Area, street and house number"
+                autocomplete="street-address" required>
+            </div>
+
+            <div class="form-group full">
+              <label for="problemDetails">Describe the AC Problem</label>
+              <textarea id="problemDetails" name="problem"
+                placeholder="For example: AC is running but not cooling..."></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-primary submit-btn" type="submit">
+            💬 Send Booking Request on WhatsApp
+          </button>
+
+          <p class="form-note">
+            Demo website: submitting opens WhatsApp with your details.
+            Your request is not stored in a database.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">FAQs</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers about our example AC services.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>How much does AC repair cost?</summary>
+            <p>The demo starting price is Rs. 1,500. The final price depends on the fault, parts and work required.</p>
+          </details>
+
+          <details>
+            <summary>Do you provide AC gas refilling?</summary>
+            <p>Gas refilling is listed as a demo service. A technician should first check for leaks and confirm the correct refrigerant and charges.</p>
+          </details>
+
+          <details>
+            <summary>How do I book an appointment?</summary>
+            <p>Fill in the booking form, select a preferred date and time, then send the prepared message through WhatsApp.</p>
+          </details>
+
+          <details>
+            <summary>Which areas do you cover?</summary>
+            <p>This demo website lists Lahore, Pakistan. Confirm actual coverage for your area before publishing the website.</p>
+          </details>
+
+          <details>
+            <summary>Are the prices and reviews real?</summary>
+            <p>No. The prices, customer names and reviews are demonstration content. Replace them with accurate business information before launch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand">
+            <span class="brand-icon">❄</span>
+            <span>CoolCare<small>AC SERVICES</small></span>
+          </a>
+          <p>
+            Your demo website for professional AC repair, installation,
+            cleaning and maintenance services in Lahore, Pakistan.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+            <li><a href="#booking">Book a Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Information</h4>
+          <ul class="footer-links">
+            <li>📍 Lahore, Pakistan</li>
+            <li>📞 <a href="tel:+923000000000">+92 300 0000000</a></li>
+            <li>💬 <a href="https://wa.me/923000000000"
+              target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="currentYear">2026</span> CoolCare AC Services.
+        Demo website — replace sample information before launch.
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions" aria-label="Quick contact actions">
+    <a class="float-btn float-call" href="tel:+923000000000"
+      aria-label="Call CoolCare" title="Call Us">☎</a>
+    <a class="float-btn float-whatsapp"
+      href="https://wa.me/923000000000"
+      target="_blank" rel="noopener noreferrer"
+      aria-label="WhatsApp CoolCare" title="WhatsApp Us">◉</a>
+  </div>
+
+  <script>
+    "use strict";
+
+    // Demo contact number. Replace with the real WhatsApp number.
+    // Use country code and digits only, without the leading +.
+    const WHATSAPP_NUMBER = "923000000000";
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after selecting a section
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Set current year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Prevent selecting a date in the past
+    const dateInput = document.getElementById("appointmentDate");
+    const localToday = new Date();
+    const year = localToday.getFullYear();
+    const month = String(localToday.getMonth() + 1).padStart(2, "0");
+    const day = String(localToday.getDate()).padStart(2, "0");
+    dateInput.min = `${year}-${month}-${day}`;
+
+    // Service cards select the matching service in the booking form
+    document.querySelectorAll(".book-service").forEach(function (link) {
+      link.addEventListener("click", function () {
+        document.getElementById("serviceType").value =
+          link.dataset.service;
+      });
+    });
+
+    // Prepare booking details and open WhatsApp
+    document.getElementById("bookingForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+
+        if (!form.reportValidity()) {
+          return;
+        }
+
+        const data = new FormData(form);
+        const name = String(data.get("name") || "").trim();
+        const phone = String(data.get("phone") || "").trim();
+        const service = String(data.get("service") || "").trim();
+        const acType = String(data.get("acType") || "").trim();
+        const date = String(data.get("date") || "").trim();
+        const time = String(data.get("time") || "").trim();
+        const address = String(data.get("address") || "").trim();
+        const problem = String(data.get("problem") || "").trim();
+
+        if (!name || !phone || !service || !date || !time || !address) {
+          alert("Please complete all required fields.");
+          return;
+        }
+
+        const message = [
+          "❄️ *NEW AC SERVICE BOOKING*",
+          "",
+          "*Business:* CoolCare AC Services",
+          "*Customer Name:* " + name,
+          "*Phone Number:* " + phone,
+          "*Service Required:* " + service,
+          "*AC Type:* " + acType,
+          "*Preferred Date:* " + date,
+          "*Preferred Time:* " + time,
+          "*Address:* " + address,
+          "*Problem Details:* " + (problem || "Not provided"),
+          "",
+          "Please confirm availability and provide a final price estimate.",
+          "",
+          "Sent through the CoolCare demo website."
+        ].join("\n");
+
+        const whatsappURL =
+          "https://wa.me/" + WHATSAPP_NUMBER +
+          "?text=" + encodeURIComponent(message);
+
+        // Opening WhatsApp does not itself submit or confirm the booking.
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+      }
+    );
+  </script>
+
+</body>
+</html>
